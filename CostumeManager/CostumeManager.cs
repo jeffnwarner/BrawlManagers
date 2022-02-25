@@ -27,7 +27,7 @@ namespace BrawlCostumeManager {
 			try {
 				Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 			} catch (Exception) {}
-			portraitViewers = new List<PortraitViewer> {cssPortraitViewer1, resultPortraitViewer1, battlePortraitViewer1, infoStockIconViewer1};
+			portraitViewers = new List<PortraitViewer> {cssPortraitViewer1, resultPortraitViewer1, battlePortraitViewer1, infoStockIconViewer1, resultStockIconViewer1};
 
 			if (!new DirectoryInfo("fighter").Exists) {
 				if (new DirectoryInfo("/private/wii/app/RSBE/pf/fighter").Exists) {
@@ -151,18 +151,31 @@ namespace BrawlCostumeManager {
 				}
 			} else {
 				int charNum = pmap.CharBustTexFor(charname);
-				int upperBound = 12;
-				for (int i = 0; i < upperBound; i++) {
-					string pathNoExt = charname + "/fit" + charname + i.ToString("D2");
-					listBox2.Items.Add(new FighterFile(pathNoExt + ".pac", charNum, i));
-					listBox2.Items.Add(new FighterFile(pathNoExt + ".pcs", charNum, i));
-					if (charname.ToLower() == "kirby") {
-						foreach (string hatchar in PortraitMap.KirbyHats) {
-							listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + i.ToString("D2") + ".pac", charNum, i));
-						}
-					}
-				}
-				listBox2.SelectedIndex = (selectedIndex < listBox2.Items.Count) ? selectedIndex : 0;
+                int upperBound = 18;
+                for (int i = 0; i < upperBound; i++) {
+                    string pathNoExt = "";
+                    if (i == 16) {
+                        pathNoExt = charname + "/fit" + charname;
+                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltR.pac", charNum, i));
+                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltR.pcs", charNum, i));
+                    }
+                    else if (i == 17) {
+                        pathNoExt = charname + "/fit" + charname;
+                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltZ.pac", charNum, i));
+                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltZ.pcs", charNum, i));
+                    }
+                    else if (i != 12) {
+                        pathNoExt = charname + "/fit" + charname + i.ToString("D2");
+                        listBox2.Items.Add(new FighterFile(pathNoExt + ".pac", charNum, i));
+                        listBox2.Items.Add(new FighterFile(pathNoExt + ".pcs", charNum, i));
+                    }
+                    if (charname.ToLower() == "kirby") {
+                        foreach (string hatchar in PortraitMap.KirbyHats) {
+                            listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + i.ToString("D2") + ".pac", charNum, i));
+                        }
+                    }
+                }
+                listBox2.SelectedIndex = (selectedIndex < listBox2.Items.Count) ? selectedIndex : 0;
 			}
 		}
 
@@ -182,7 +195,9 @@ namespace BrawlCostumeManager {
 
 		private void cBlissCheckbox_Click(object sender, EventArgs e) {
 			projectMCheckbox.Checked = false;
-			pmap = cBlissCheckbox.Checked
+            legacyTECheckbox.Checked = false;
+            S3CCheckbox.Checked = false;
+            pmap = cBlissCheckbox.Checked
 				? new PortraitMap.CBliss()
 				: new PortraitMap();
 			pmap.BrawlExScan("../BrawlEx");
@@ -193,6 +208,8 @@ namespace BrawlCostumeManager {
 
 		private void projectMCheckbox_Click(object sender, EventArgs e) {
 			cBlissCheckbox.Checked = false;
+            legacyTECheckbox.Checked = false;
+            S3CCheckbox.Checked = false;
 			pmap = projectMCheckbox.Checked
 				? new PortraitMap.ProjectM()
 				: new PortraitMap();
@@ -202,7 +219,33 @@ namespace BrawlCostumeManager {
 			}
 		}
 
-		private void swapPortraitsForWarioStylesToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void legacyTECheckbox_Click(object sender, EventArgs e) {
+            cBlissCheckbox.Checked = false;
+            projectMCheckbox.Checked = false;
+            S3CCheckbox.Checked = false;
+            pmap = legacyTECheckbox.Checked
+                ? new PortraitMap.LegacyTE()
+                : new PortraitMap();
+            pmap.BrawlExScan("../BrawlEx");
+            foreach (PortraitViewer p in portraitViewers) {
+                RefreshPortraits();
+            }
+        }
+
+        private void S3CCheckbox_Click(object sender, EventArgs e) {
+            cBlissCheckbox.Checked = false;
+            projectMCheckbox.Checked = false;
+            legacyTECheckbox.Checked = false;
+            pmap = S3CCheckbox.Checked
+                ? new PortraitMap.S3C()
+                : new PortraitMap();
+            pmap.BrawlExScan("../BrawlEx");
+            foreach (PortraitViewer p in portraitViewers) {
+                RefreshPortraits();
+            }
+        }
+
+        private void swapPortraitsForWarioStylesToolStripMenuItem_Click(object sender, EventArgs e) {
 			Swap_Wario = swapPortraitsForWarioStylesToolStripMenuItem.Checked;
 			foreach (PortraitViewer p in portraitViewers) {
 				RefreshPortraits();

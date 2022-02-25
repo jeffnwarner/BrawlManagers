@@ -80,6 +80,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Portrait Viewers\PortraitViewerTextureData.cs" />
+    <Compile Include="Portrait Viewers\ResultStockIconViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="PortraitMap.cs" />
     <Compile Include="Portrait Viewers\BattleSinglePortraitViewer.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModelManager.resx">
       <DependentUpon>ModelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portrait Viewers\ResultStockIconViewer.resx">
+      <DependentUpon>ResultStockIconViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Portrait Viewers\SinglePortraitViewer.resx">
       <DependentUpon>SinglePortraitViewer.cs</DependentUpon>

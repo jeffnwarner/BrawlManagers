@@ -47,7 +47,9 @@
 			this.swapPortraitsForWarioStylesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cBlissCheckbox = new System.Windows.Forms.ToolStripMenuItem();
 			this.projectMCheckbox = new System.Windows.Forms.ToolStripMenuItem();
-			this.separator = new System.Windows.Forms.ToolStripSeparator();
+            this.legacyTECheckbox = new System.Windows.Forms.ToolStripMenuItem();
+            this.S3CCheckbox = new System.Windows.Forms.ToolStripMenuItem();
+            this.separator = new System.Windows.Forms.ToolStripSeparator();
 			this.nameportraitPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -59,6 +61,7 @@
 			this.modelManager1 = new BrawlCostumeManager.ModelManager();
 			this.cssPortraitViewer1 = new BrawlCostumeManager.CSSPortraitViewer();
 			this.infoStockIconViewer1 = new BrawlCostumeManager.InfoStockIconViewer();
+            this.resultStockIconViewer1 = new BrawlCostumeManager.ResultStockIconViewer();
 			this.costumeNumberLabel = new BrawlCostumeManager.CostumeNumberLabel();
 			this.battlePortraitViewer1 = new BrawlCostumeManager.BattleSinglePortraitViewer();
 			this.resultPortraitViewer1 = new BrawlCostumeManager.ResultSinglePortraitViewer();
@@ -221,6 +224,8 @@
             this.swapPortraitsForWarioStylesToolStripMenuItem,
             this.cBlissCheckbox,
             this.projectMCheckbox,
+            this.legacyTECheckbox,
+            this.S3CCheckbox,
             this.separator,
             this.nameportraitPreviewToolStripMenuItem,
             this.backgroundColorToolStripMenuItem});
@@ -286,10 +291,26 @@
 			this.projectMCheckbox.Size = new System.Drawing.Size(274, 22);
 			this.projectMCheckbox.Text = "Use Project M 3.6 mappings";
 			this.projectMCheckbox.Click += new System.EventHandler(this.projectMCheckbox_Click);
-			// 
-			// separator
-			// 
-			this.separator.Name = "separator";
+            // 
+            // legacyTECheckbox
+            // 
+            this.legacyTECheckbox.CheckOnClick = true;
+            this.legacyTECheckbox.Name = "legacyTECheckbox";
+            this.legacyTECheckbox.Size = new System.Drawing.Size(274, 22);
+            this.legacyTECheckbox.Text = "Use Legacy TE mappings";
+            this.legacyTECheckbox.Click += new System.EventHandler(this.legacyTECheckbox_Click);
+            // 
+            // S3CCheckbox
+            // 
+            this.S3CCheckbox.CheckOnClick = true;
+            this.S3CCheckbox.Name = "S3CCheckbox";
+            this.S3CCheckbox.Size = new System.Drawing.Size(274, 22);
+            this.S3CCheckbox.Text = "Use Smash 3C mappings";
+            this.S3CCheckbox.Click += new System.EventHandler(this.S3CCheckbox_Click);
+            // 
+            // separator
+            // 
+            this.separator.Name = "separator";
 			this.separator.Size = new System.Drawing.Size(271, 6);
 			// 
 			// nameportraitPreviewToolStripMenuItem
@@ -355,6 +376,8 @@
 			this.globalPVsFlowLayoutPanel.AutoSize = true;
 			this.globalPVsFlowLayoutPanel.Controls.Add(this.cssPortraitViewer1);
 			this.globalPVsFlowLayoutPanel.Controls.Add(this.infoStockIconViewer1);
+            this.globalPVsFlowLayoutPanel.Controls.Add(this.resultStockIconViewer1);
+            //this.globalPVsFlowLayoutPanel.Controls.Add(this.resultPortraitViewer1);
 			this.globalPVsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
 			this.globalPVsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.globalPVsFlowLayoutPanel.Location = new System.Drawing.Point(408, 25);
@@ -396,10 +419,17 @@
 			this.infoStockIconViewer1.Name = "infoStockIconViewer1";
 			this.infoStockIconViewer1.Size = new System.Drawing.Size(128, 40);
 			this.infoStockIconViewer1.TabIndex = 12;
-			// 
-			// costumeNumberLabel
-			// 
-			this.costumeNumberLabel.Location = new System.Drawing.Point(3, 0);
+            // 
+            // resultStockIconViewer1
+            // 
+            this.resultStockIconViewer1.Location = new System.Drawing.Point(3, 149);
+            this.resultStockIconViewer1.Name = "resultStockIconViewer1";
+            this.resultStockIconViewer1.Size = new System.Drawing.Size(128, 40);
+            this.resultStockIconViewer1.TabIndex = 4;
+            // 
+            // costumeNumberLabel
+            // 
+            this.costumeNumberLabel.Location = new System.Drawing.Point(3, 0);
 			this.costumeNumberLabel.Name = "costumeNumberLabel";
 			this.costumeNumberLabel.Size = new System.Drawing.Size(128, 20);
 			this.costumeNumberLabel.TabIndex = 6;
@@ -432,7 +462,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(684, 406);
+			this.ClientSize = new System.Drawing.Size(684, 456);
 			this.Controls.Add(this.modelManager1);
 			this.Controls.Add(this.brawlSplitter3);
 			this.Controls.Add(this.splitContainer2);
@@ -487,6 +517,8 @@
 		private System.Windows.Forms.ToolStripMenuItem defaultZoomLevelToolStripMenuItem;
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
 		private System.Windows.Forms.ToolStripMenuItem projectMCheckbox;
+        private System.Windows.Forms.ToolStripMenuItem legacyTECheckbox;
+        private System.Windows.Forms.ToolStripMenuItem S3CCheckbox;
         private System.Windows.Forms.FlowLayoutPanel otherPVsFlowLayoutPanel;
 		private System.Windows.Forms.ToolStripMenuItem updateMewtwoHatForCurrentKirbyToolStripMenuItem;
 		private CostumeNumberLabel costumeNumberLabel;
@@ -494,6 +526,7 @@
         private BrawlManagerLib.BrawlSplitter brawlSplitter2;
         private BrawlManagerLib.BrawlSplitter brawlSplitter3;
 		private InfoStockIconViewer infoStockIconViewer1;
+        private ResultStockIconViewer resultStockIconViewer1;
 		private System.Windows.Forms.FlowLayoutPanel globalPVsFlowLayoutPanel;
 		private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
 		private System.Windows.Forms.ToolStripMenuItem use16ptFontToolStripMenuItem;
