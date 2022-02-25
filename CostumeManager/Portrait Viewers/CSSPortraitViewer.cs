@@ -79,22 +79,24 @@ namespace BrawlCostumeManager {
 		private void OverlayName() {
             Image orig = textureData[0].Panel.BackgroundImage;
 
-            Bitmap name = new Bitmap(textureData[1].Texture.GetImage(0));
-			Bitmap swapped = BitmapUtilities.AlphaSwap(name);
-			Bitmap blurred = BitmapUtilities.BlurCombine(swapped, Color.Black);
+			if (textureData[1].Texture != null) {
+				Bitmap name = new Bitmap(textureData[1].Texture.GetImage(0));
+				Bitmap swapped = BitmapUtilities.AlphaSwap(name);
+				Bitmap blurred = BitmapUtilities.BlurCombine(swapped, Color.Black);
 
-			Bitmap overlaid = new Bitmap(orig.Width, orig.Height);
-			Graphics g = Graphics.FromImage(overlaid);
-			g.DrawImage(orig,
-				new Rectangle(0, 0, 128, 128),
-				new Rectangle(0, 0, 128, 128),
-				GraphicsUnit.Pixel);
-			g.DrawImage(blurred, new Point[] {
-				new Point(0, 98),
-				new Point(131, 98),
-				new Point(-3, 127)
-			});
-            textureData[0].Panel.BackgroundImage = overlaid;
+				Bitmap overlaid = new Bitmap(orig.Width, orig.Height);
+				Graphics g = Graphics.FromImage(overlaid);
+				g.DrawImage(orig,
+					new Rectangle(0, 0, 128, 128),
+					new Rectangle(0, 0, 128, 128),
+					GraphicsUnit.Pixel);
+				g.DrawImage(blurred, new Point[] {
+					new Point(0, 98),
+					new Point(131, 98),
+					new Point(-3, 127)
+				});
+				textureData[0].Panel.BackgroundImage = overlaid;
+            }
 		}
 
 		public override void UpdateDirectory() {

@@ -145,7 +145,7 @@ namespace BrawlCostumeManager {
 			if (charname == DASH) {
 				foreach (FileInfo f in new DirectoryInfo(".").EnumerateFiles()) {
 					string name = f.Name.ToLower();
-					if (name.EndsWith(".pac") || name.EndsWith(".pcs")) {
+					if (name.EndsWith(".pac")) {
 						listBox2.Items.Add(new FighterFile(f.Name, 1, 1));
 					}
 				}

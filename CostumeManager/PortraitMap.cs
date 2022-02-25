@@ -272,63 +272,179 @@ namespace BrawlCostumeManager {
                 // Some of these characters have their portraits in a different order than Brawl, or have their additional portraits "out of order."
                 case 0:
                     // Mario
-                    ret.Add(key, new int[] { 0, 6, 3, 2, 5, 7, 11, 8, 9, 10, /*end*/ 1, 4 });
+                    ret.Add(key, new int[] { 0, 6, 3, 2, 5, 4, 20, 21, 22, 23, 24, 25, 30, 31, 32 });
+                    break;
+				case 1:
+					// Donkey Kong
+					ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    break;
+				case 2:
+					// Link
+					ret.Add(key, new int[] { 0, 1, 3, 5, 6, 4, 7, 8, 9, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 3:
                     // Samus
-                    ret.Add(key, new int[] { 0, 3, 1, 4, 2, 5, 7, 8, 6 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 20, 23, 27, 30, 31, 32, 33, 35, 36, 37 });
+                    break;
+				case 4:
+                    // Yoshi
+                    ret.Add(key, new int[] { 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20, 21, 22 });
+                    break;
+				case 5:
+                    // Kirby
+                    ret.Add(key, new int[] { 0, 4, 3, 1, 2, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22 });
+                    break;
+				case 6:
+                    // Fox
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 7:
                     // Pikachu
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 7, 5, 6, 8 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 7, 5, 6, 8, 9, 10, 11, 12, 13, 14 });
+                    break;
+				case 8:
+                    // Luigi
+                    ret.Add(key, new int[] { 0, 5, 1, 3, 4, 6, 7, 20, 21, 22, 23, 30, 31, 32, 33 });
+                    break;
+				case 9:
+                    // Captain Falcon
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 20, 30, 31, 32, 33, 34 });
+                    break;
+				case 10:
+                    // Ness
+                    ret.Add(key, new int[] { 0, 5, 4, 2, 3, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    break;
+				case 11:
+                    // Bowser
+                    ret.Add(key, new int[] { 0, 4, 1, 3, 5, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
                     break;
                 case 12:
                     // Peach
-                    ret.Add(key, new int[] { 0, 5, 1, 3, 2, 4, 7, 6 });
+                    ret.Add(key, new int[] { 0, 5, 1, 3, 2, 4, 6, 7, 8, 20, 19, 30, 31, 32, 33 });
+                    break;
+				case 13:
+                    // Zelda
+                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    break;
+                case 14:
+                    // Sheik
+                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    break;
+                case 15:
+                    // Ice Climbers
+                    ret.Add(key, new int[] { 0, 1, 3, 4, 2, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    break;
+                case 16:
+                    // Marth
+                    ret.Add(key, new int[] { 0, 1, 2, 4, 5, 3, 6, 20, 21, 22, 23, 30, 31, 32, 33 });
+                    break;
+                case 17:
+                    // Mr. Game & Watch
+                    ret.Add(key, new int[] { 0, 1, 4, 3, 2, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16 });
+                    break;
+                case 18:
+                    // Falco
+                    ret.Add(key, new int[] { 0, 5, 3, 1, 2, 4, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 19:
                     // Ganondorf
-                    ret.Add(key, new int[] { 0, 4, 3, 2, 1, 5, 6, 7, 8, 9, 13, 10, 14, 15, 11 });
+                    ret.Add(key, new int[] { 0, 4, 3, 2, 1, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
+                    break;
+                case 21:
+                    // Metaknight
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    break;
+                case 22:
+                    // Pit
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
                     break;
                 case 23:
                     // Zero Suit Samus
-                    ret.Add(key, new int[] { 0, 3, 1, 4, 2, 5, 7, 8, 6 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 20, 23, 27, 30, 31, 32, 33, 35, 36, 37 });
+                    break;
+                case 24:
+                    // Olimar
+                    ret.Add(key, new int[] { 0, 4, 1, 5, 2, 3, 6, 7, 20, 21, 30, 31, 32, 33, 34 });
+                    break;
+                case 25:
+                    // Lucas
+                    ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    break;
+                case 26:
+                    // Diddy Kong
+                    ret.Add(key, new int[] { 0, 5, 4, 6, 2, 3, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
                     break;
                 case 27:
                     // Mewtwo - uses Pokémon Trainer's character index
-                    ret.Add(key, new int[] { 0, 2, 1, 3, 4, 5 });
+                    ret.Add(key, new int[] { 0, 2, 1, 3, 4, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
                     break;
                 case 28:
                     // Charizard
-                    ret.Add(key, new int[] { 0, 1, 3, 2, 4, 5, 6 });
+                    ret.Add(key, new int[] { 0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
                     break;
                 case 29:
                     // Squirtle
-                    ret.Add(key, new int[] { 0, 2, 1, 3, 4, 5, 6, 7 });
+                    ret.Add(key, new int[] { 0, 2, 1, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    break;
+                case 30:
+                    // Ivysaur
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    break;
+                case 31:
+                    // King Dedede
+                    ret.Add(key, new int[] { 0, 6, 2, 5, 3, 4, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    break;
+                case 32:
+                    // Lucario
+                    ret.Add(key, new int[] { 0, 1, 4, 5, 2, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    break;
+                case 33:
+                    // Ike
+                    ret.Add(key, new int[] { 0, 5, 1, 3, 2, 4, 6, 20, 21, 22, 23, 30, 31, 32, 33 });
                     break;
                 case 34:
                     // R.O.B.
-                    ret.Add(key, new int[] { 0, 6, 5, 4, 3, 2, 7, 8, 9, 10, 1, 13, 11, 14, 15 });
+                    ret.Add(key, new int[] { 0, 6, 5, 4, 3, 2, 20, 21, 22, 23, 30, 31, 32, 33, 34 });
+                    break;
+                case 36:
+                    // Jigglypuff
+                    ret.Add(key, new int[] { 0, 1, 4, 3, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 });
                     break;
                 case 37:
                     // Wario
-                    ret.Add(key, new int[] { 6, 7, 10, 8, 11, 9, 0, 1, 3, 2, 5, 4, 13, 14 });
+                    ret.Add(key, new int[] { 6, 7, 10, 8, 11, 9, 0, 1, 3, 2, 5, 4, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 39:
                     // Roy
-                    ret.Add(key, new int[] { 0, 2, 1, 3, 4, 5, 6 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 40:
                     // Toon Link
-                    ret.Add(key, new int[] { 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 2 });
+                    ret.Add(key, new int[] { 0, 1, 3, 4, 5, 6, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    break;
+                case 42:
+                    // Knuckles
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23 });
+                    break;
+                case 43:
+                    // Wolf
+                    ret.Add(key, new int[] { 0, 1, 4, 2, 3, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    break;
+                case 44:
+                    // Giga Bowser
+                    ret.Add(key, new int[] { 0, 4, 1, 3, 5, 6, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    break;
+                 case 45:
+                    // Snake
+                    ret.Add(key, new int[] { 0, 1, 3, 4, 2, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
                     break;
                 case 46:
                     // Sonic
-                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 });
+                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
                     break;
                 case 66:
                     // Wario Man
-                    ret.Add(key, new int[] { 6, 7, 10, 8, 11, 9, 0, 1, 3, 2, 5, 4, 13, 14 });
+                    ret.Add(key, new int[] { 6, 7, 10, 8, 11, 9, 0, 1, 3, 2, 5, 4, 20, 21, 22, 23, 24, 25 });
                     break;
                 default:
                     if (!PortraitToCostumeMappings.ContainsKey(key)) continue;
