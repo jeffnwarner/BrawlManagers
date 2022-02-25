@@ -151,27 +151,32 @@ namespace BrawlCostumeManager {
 				}
 			} else {
 				int charNum = pmap.CharBustTexFor(charname);
-                int upperBound = 18;
+                int upperBound = 52;
                 for (int i = 0; i < upperBound; i++) {
                     string pathNoExt = "";
-                    if (i == 16) {
+                    if (i == 50) {
                         pathNoExt = charname + "/fit" + charname;
                         listBox2.Items.Add(new FighterFile(pathNoExt + "AltR.pac", charNum, i));
-                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltR.pcs", charNum, i));
                     }
-                    else if (i == 17) {
+                    else if (i == 51) {
                         pathNoExt = charname + "/fit" + charname;
                         listBox2.Items.Add(new FighterFile(pathNoExt + "AltZ.pac", charNum, i));
-                        listBox2.Items.Add(new FighterFile(pathNoExt + "AltZ.pcs", charNum, i));
                     }
-                    else if (i != 12) {
+                    else {
                         pathNoExt = charname + "/fit" + charname + i.ToString("D2");
                         listBox2.Items.Add(new FighterFile(pathNoExt + ".pac", charNum, i));
-                        listBox2.Items.Add(new FighterFile(pathNoExt + ".pcs", charNum, i));
                     }
                     if (charname.ToLower() == "kirby") {
                         foreach (string hatchar in PortraitMap.KirbyHats) {
-                            listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + i.ToString("D2") + ".pac", charNum, i));
+							if (i == 50) {
+                            	listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + "_R.pac", charNum, i));
+							}
+							else if (i == 51) {
+                            	listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + "_Z.pac", charNum, i));
+							} 
+							else {
+                            	listBox2.Items.Add(new FighterFile("kirby/fitkirby" + hatchar + i.ToString("D2") + ".pac", charNum, i));
+							}
                         }
                     }
                 }
