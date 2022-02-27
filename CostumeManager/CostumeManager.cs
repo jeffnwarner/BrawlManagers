@@ -200,8 +200,9 @@ namespace BrawlCostumeManager {
 
 		private void cBlissCheckbox_Click(object sender, EventArgs e) {
 			projectMCheckbox.Checked = false;
-            legacyTECheckbox.Checked = false;
+            brawlCheckbox.Checked = false;
             S3CCheckbox.Checked = false;
+			BPJCheckbox.Checked = false;
             pmap = cBlissCheckbox.Checked
 				? new PortraitMap.CBliss()
 				: new PortraitMap();
@@ -213,8 +214,9 @@ namespace BrawlCostumeManager {
 
 		private void projectMCheckbox_Click(object sender, EventArgs e) {
 			cBlissCheckbox.Checked = false;
-            legacyTECheckbox.Checked = false;
+            brawlCheckbox.Checked = false;
             S3CCheckbox.Checked = false;
+			BPJCheckbox.Checked = false;
 			pmap = projectMCheckbox.Checked
 				? new PortraitMap.ProjectM()
 				: new PortraitMap();
@@ -224,12 +226,13 @@ namespace BrawlCostumeManager {
 			}
 		}
 
-        private void legacyTECheckbox_Click(object sender, EventArgs e) {
+        private void brawlCheckbox_Click(object sender, EventArgs e) {
             cBlissCheckbox.Checked = false;
             projectMCheckbox.Checked = false;
             S3CCheckbox.Checked = false;
-            pmap = legacyTECheckbox.Checked
-                ? new PortraitMap.LegacyTE()
+			BPJCheckbox.Checked = false;
+            pmap = brawlCheckbox.Checked
+                ? new PortraitMap.Brawl()
                 : new PortraitMap();
             pmap.BrawlExScan("../BrawlEx");
             foreach (PortraitViewer p in portraitViewers) {
@@ -240,9 +243,24 @@ namespace BrawlCostumeManager {
         private void S3CCheckbox_Click(object sender, EventArgs e) {
             cBlissCheckbox.Checked = false;
             projectMCheckbox.Checked = false;
-            legacyTECheckbox.Checked = false;
+            brawlCheckbox.Checked = false;
+			BPJCheckbox.Checked = false;
             pmap = S3CCheckbox.Checked
                 ? new PortraitMap.S3C()
+                : new PortraitMap();
+            pmap.BrawlExScan("../BrawlEx");
+            foreach (PortraitViewer p in portraitViewers) {
+                RefreshPortraits();
+            }
+        }
+
+		private void BPJCheckbox_Click(object sender, EventArgs e) {
+            cBlissCheckbox.Checked = false;
+            projectMCheckbox.Checked = false;
+            brawlCheckbox.Checked = false;
+            S3CCheckbox.Checked = false;
+            pmap = BPJCheckbox.Checked
+                ? new PortraitMap.BPJ()
                 : new PortraitMap();
             pmap.BrawlExScan("../BrawlEx");
             foreach (PortraitViewer p in portraitViewers) {

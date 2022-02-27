@@ -47,8 +47,9 @@
 			this.swapPortraitsForWarioStylesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cBlissCheckbox = new System.Windows.Forms.ToolStripMenuItem();
 			this.projectMCheckbox = new System.Windows.Forms.ToolStripMenuItem();
-            this.legacyTECheckbox = new System.Windows.Forms.ToolStripMenuItem();
+            this.brawlCheckbox = new System.Windows.Forms.ToolStripMenuItem();
             this.S3CCheckbox = new System.Windows.Forms.ToolStripMenuItem();
+            this.BPJCheckbox = new System.Windows.Forms.ToolStripMenuItem();
             this.separator = new System.Windows.Forms.ToolStripSeparator();
 			this.nameportraitPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.backgroundColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -224,8 +225,9 @@
             this.swapPortraitsForWarioStylesToolStripMenuItem,
             this.cBlissCheckbox,
             this.projectMCheckbox,
-            this.legacyTECheckbox,
+            this.brawlCheckbox,
             this.S3CCheckbox,
+            this.BPJCheckbox,
             this.separator,
             this.nameportraitPreviewToolStripMenuItem,
             this.backgroundColorToolStripMenuItem});
@@ -292,13 +294,13 @@
 			this.projectMCheckbox.Text = "Use Project M 3.6 mappings";
 			this.projectMCheckbox.Click += new System.EventHandler(this.projectMCheckbox_Click);
             // 
-            // legacyTECheckbox
+            // brawlCheckbox
             // 
-            this.legacyTECheckbox.CheckOnClick = true;
-            this.legacyTECheckbox.Name = "legacyTECheckbox";
-            this.legacyTECheckbox.Size = new System.Drawing.Size(274, 22);
-            this.legacyTECheckbox.Text = "Use Legacy TE mappings";
-            this.legacyTECheckbox.Click += new System.EventHandler(this.legacyTECheckbox_Click);
+            this.brawlCheckbox.CheckOnClick = true;
+            this.brawlCheckbox.Name = "brawlCheckbox";
+            this.brawlCheckbox.Size = new System.Drawing.Size(274, 22);
+            this.brawlCheckbox.Text = "Use Brawl mappings";
+            this.brawlCheckbox.Click += new System.EventHandler(this.brawlCheckbox_Click);
             // 
             // S3CCheckbox
             // 
@@ -307,6 +309,14 @@
             this.S3CCheckbox.Size = new System.Drawing.Size(274, 22);
             this.S3CCheckbox.Text = "Use Smash 3C mappings";
             this.S3CCheckbox.Click += new System.EventHandler(this.S3CCheckbox_Click);
+			// 
+            // BPJCheckbox
+            // 
+            this.BPJCheckbox.CheckOnClick = true;
+            this.BPJCheckbox.Name = "BPJCheckbox";
+            this.BPJCheckbox.Size = new System.Drawing.Size(274, 22);
+            this.BPJCheckbox.Text = "Use britipino mappings";
+            this.BPJCheckbox.Click += new System.EventHandler(this.BPJCheckbox_Click);
             // 
             // separator
             // 
@@ -517,8 +527,9 @@
 		private System.Windows.Forms.ToolStripMenuItem defaultZoomLevelToolStripMenuItem;
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
 		private System.Windows.Forms.ToolStripMenuItem projectMCheckbox;
-        private System.Windows.Forms.ToolStripMenuItem legacyTECheckbox;
+        private System.Windows.Forms.ToolStripMenuItem brawlCheckbox;
         private System.Windows.Forms.ToolStripMenuItem S3CCheckbox;
+        private System.Windows.Forms.ToolStripMenuItem BPJCheckbox;
         private System.Windows.Forms.FlowLayoutPanel otherPVsFlowLayoutPanel;
 		private System.Windows.Forms.ToolStripMenuItem updateMewtwoHatForCurrentKirbyToolStripMenuItem;
 		private CostumeNumberLabel costumeNumberLabel;
