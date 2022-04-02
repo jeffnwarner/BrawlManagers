@@ -707,7 +707,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 16:
                     // Marth
-                    ret.Add(key, new int[] { 0, 1, 2, 4, 5, 3, 6, 7, 8, 9, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34, 40, 41, 42, 43 });
+                    ret.Add(key, new int[] { 0, 1, 2, 4, 5, 3, 6, 7, 8, 9, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34, 40, 41, 42, 43, 44 });
                     break;
                 case 17:
                     // Mr. Game & Watch
@@ -743,7 +743,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 26:
                     // Diddy Kong
-                    ret.Add(key, new int[] { 0, 5, 4, 6, 2, 3, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 5, 4, 6, 2, 3, 7, 8, 9, 10, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 27:
                     // Mewtwo - uses Pokémon Trainer's character index
