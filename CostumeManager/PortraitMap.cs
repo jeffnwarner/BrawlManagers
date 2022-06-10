@@ -482,7 +482,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 6:
                     // Fox
-                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33 });
                     break;
                 case 7:
                     // Pikachu
@@ -574,7 +574,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 30:
                     // Ivysaur
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 31:
                     // King Dedede
@@ -667,7 +667,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 6:
                     // Fox
-                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    ret.Add(key, new int[] { 0, 4, 1, 2, 3, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 34 });
                     break;
                 case 7:
                     // Pikachu
@@ -759,7 +759,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 30:
                     // Ivysaur
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 31:
                     // King Dedede
