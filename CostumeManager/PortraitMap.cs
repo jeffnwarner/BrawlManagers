@@ -739,7 +739,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 25:
                     // Lucas
-                    ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
+                    ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 34 });
                     break;
                 case 26:
                     // Diddy Kong
@@ -751,7 +751,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 28:
                     // Charizard
-                    ret.Add(key, new int[] { 0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 29:
                     // Squirtle
