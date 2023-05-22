@@ -20,9 +20,16 @@ namespace BrawlCostumeManager {
 		}
 		public override ResourceNode PortraitRootFor(int charNum, int costumeNum) {
 			if (costumeNum < 0) return null;
-
-			string tex_number = (charNum * 50 + costumeNum + 1).ToString("D4");
-			int index = charNum * 50 + costumeNum + 1;
+			
+			string tex_number;
+			int index;
+			if (charNum == 66) {
+				tex_number = (9000 + costumeNum + 1).ToString("D4");
+				index = 9000 + costumeNum + 1;
+			} else {
+				tex_number = (charNum * 50 + costumeNum + 1).ToString("D4");
+				index = charNum * 50 + costumeNum + 1;
+			}
 			ResourceNode bres;
 			if (!bres_cache.TryGetValue(index, out bres)) {
 				string f = "../info/portrite/InfFace" + tex_number + ".brres";
