@@ -282,7 +282,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 2:
 					// Link
-					ret.Add(key, new int[] { 0, 1, 3, 5, 6, 4, 7, 8, 9, 20, 21, 22, 23, 24, 25 });
+					ret.Add(key, new int[] { 0, 1, 3, 5, 6, 4, 7, 8, 9, 20, 21, 22, 23, 24, 25, 26 });
                     break;
                 case 3:
                     // Samus
@@ -294,7 +294,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 5:
                     // Kirby
-                    ret.Add(key, new int[] { 0, 4, 3, 1, 2, 5, 6, 7, 20, 21, 22, 23, 30, 31, 32, 33 });
+                    ret.Add(key, new int[] { 0, 4, 3, 1, 2, 5, 6, 7, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
                     break;
 				case 6:
                     // Fox
@@ -350,7 +350,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 19:
                     // Ganondorf
-                    ret.Add(key, new int[] { 0, 4, 3, 2, 1, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
+                    ret.Add(key, new int[] { 0, 4, 3, 2, 1, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 34 });
                     break;
                 case 21:
                     // Metaknight
@@ -370,7 +370,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 25:
                     // Lucas
-                    ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    ret.Add(key, new int[] { 0, 4, 1, 3, 2, 5, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33 });
                     break;
                 case 26:
                     // Diddy Kong
@@ -546,7 +546,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 23:
                     // Zero Suit Samus
-                    ret.Add(key, new int[] { 0, 3, 1, 4, 2, 5, 20, 25, 27, 30, 31, 32, 33, 35, 36, 37, 40, 41, 42, 43 });
+                    ret.Add(key, new int[] { 0, 3, 1, 4, 2, 5, 20, 23, 27, 30, 31, 32, 33, 35, 36, 37, 40, 41, 42, 43 });
                     break;
                 case 24:
                     // Olimar
@@ -578,7 +578,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 31:
                     // King Dedede
-                    ret.Add(key, new int[] { 0, 6, 2, 5, 3, 4, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 6, 2, 5, 3, 4, 7, 8, 9, 10, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 32:
                     // Lucario
@@ -610,7 +610,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 42:
                     // Knuckles
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 43:
                     // Wolf
@@ -626,7 +626,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 46:
                     // Sonic
-                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 20, 21, 22, 23, 30, 31, 32, 33 });
+                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 10, 11, 12, 20, 21, 22, 23, 24 });
                     break;
                 case 66:
                     // Wario Man
@@ -651,7 +651,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 2:
 					// Link
-					ret.Add(key, new int[] { 0, 1, 3, 5, 6, 4, 7, 8, 9, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 34 });
+					ret.Add(key, new int[] { 0, 1, 3, 5, 6, 4, 7, 8, 9, 20, 21, 22, 23, 24, 25, 26, 30, 31, 32, 33, 34 });
                     break;
                 case 3:
                     // Samus
@@ -659,7 +659,7 @@ namespace BrawlCostumeManager {
                     break;
 				case 4:
                     // Yoshi
-                    ret.Add(key, new int[] { 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20, 21, 22 });
+                    ret.Add(key, new int[] { 0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20, 21, 22, 23, 24 });
                     break;
 				case 5:
                     // Kirby
@@ -695,11 +695,11 @@ namespace BrawlCostumeManager {
                     break;
 				case 13:
                     // Zelda
-                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 14:
                     // Sheik
-                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 20, 21, 22, 23, 24, 25 });
+                    ret.Add(key, new int[] { 0, 1, 3, 5, 2, 4, 6, 7, 8, 9, 20, 21, 22, 23, 24, 25 });
                     break;
                 case 15:
                     // Ice Climbers
@@ -731,7 +731,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 23:
                     // Zero Suit Samus
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 20, 25, 27, 30, 31, 32, 33, 35, 36, 37, 40, 41, 42, 43 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 20, 23, 27, 30, 31, 32, 33, 35, 36, 37, 40, 41, 42, 43 });
                     break;
                 case 24:
                     // Olimar
@@ -763,7 +763,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 31:
                     // King Dedede
-                    ret.Add(key, new int[] { 0, 6, 2, 5, 3, 4, 7, 8, 9, 10, 20, 21, 22, 23, 24 });
+                    ret.Add(key, new int[] { 0, 6, 2, 5, 3, 4, 7, 8, 9, 10, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 32:
                     // Lucario
@@ -795,7 +795,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 42:
                     // Knuckles
-                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23 });
+                    ret.Add(key, new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21, 22, 23, 24, 30, 31, 32, 33, 34 });
                     break;
                 case 43:
                     // Wolf
@@ -811,7 +811,7 @@ namespace BrawlCostumeManager {
                     break;
                 case 46:
                     // Sonic
-                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 20, 21, 22, 23, 24, 30, 31, 32, 33 });
+                    ret.Add(key, new int[] { 0, 1, 4, 2, 5, 6, 7, 20, 21, 22, 23, 24, 10, 11, 12 });
                     break;
                 case 66:
                     // Wario Man
