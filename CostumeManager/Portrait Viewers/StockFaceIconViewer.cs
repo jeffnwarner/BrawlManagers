@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using BrawlManagerLib;
 
 namespace BrawlCostumeManager {
-	public class ResultStockIconViewer : PortraitViewer {
+	public class StockFaceIconViewer : PortraitViewer {
 		private int _charNum, _costumeNum;
 
 		private static PortraitViewerTextureData[] textureData = {
-			new PortraitViewerTextureData(32, 32, (i,j) => "2/Misc Data [120]/Textures(NW4R)/InfStc." + (i != 66 ? i*50 + j + 1 : 9000 + j + 1).ToString("D4"))
+			new PortraitViewerTextureData(32, 32, (i,j) => "Textures(NW4R)/InfStc." + (i != 66 ? i*50 + j + 1 : 9000 + j + 1).ToString("D4"))
 		};
 
 		private string _openFilePath;
@@ -25,7 +25,7 @@ namespace BrawlCostumeManager {
 		/// </summary>
 		private ResourceNode info_en;
 
-		public ResultStockIconViewer() {
+		public StockFaceIconViewer() {
             InitializeComponent();
 			foreach (var atd in textureData) {
                 additionalTexturesPanel.Controls.Add(atd.Panel);
@@ -50,11 +50,11 @@ namespace BrawlCostumeManager {
 		}
 
 		public override void UpdateDirectory() {
-			if (File.Exists("../stage/melee/STGRESULT.pac")) {
-				string path = "../stage/melee/STGRESULT.pac";
+			if (File.Exists("../menu/common/StockFaceTex.brres")) {
+				string path = "../menu/common/StockFaceTex.brres";
 				info_en = NodeFactory.FromFile(null, path);
 				_openFilePath = path;
-			}
+			} 
 		}
 
 		private void saveButton_Click(object sender, EventArgs e) {
@@ -89,15 +89,15 @@ namespace BrawlCostumeManager {
 			this.saveButton.Name = "saveButton";
 			this.saveButton.Size = new System.Drawing.Size(56, 48);
 			this.saveButton.TabIndex = 2;
-			this.saveButton.Text = "Save STGRESULT.pac";
+			this.saveButton.Text = "Save StockFaceTex.brres";
 			this.saveButton.UseVisualStyleBackColor = true;
 			this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
 			// 
-			// InfoStockIconViewer
+			// StockFaceIconViewer
 			// 
 			this.Controls.Add(this.saveButton);
 			this.Controls.Add(this.additionalTexturesPanel);
-			this.Name = "ResultStockIconViewer";
+			this.Name = "StockFaceIconViewer";
 			this.Size = new System.Drawing.Size(128, 48);
 			this.ResumeLayout(false);
 
